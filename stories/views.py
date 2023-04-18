@@ -18,7 +18,7 @@ def stories(request):
     count= Stories.objects.all().count()
     context= {'count': count}
     paginator = Paginator(users,5)
-    phr=str((random.randint(0, 8)))
+    phr=str((random.randint(0, 11)))
     items =  open("phrases/"+phr, "r")
     try:
         users = paginator.page(page)
