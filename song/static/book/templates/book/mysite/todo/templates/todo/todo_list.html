@@ -1,0 +1,46 @@
+{%extends 'todo/base.html'%}
+
+{%load static%}
+
+
+
+<meta charset="UTF-8">
+<title>{%block title%} todos mick{%endblock%}</title>
+
+
+<body>
+
+{%block pagecontent%}
+
+<div class="jumbotron">
+  <h1 style="color:dodgerblue" class="display-4">Site Todo List</h1>
+  <p class="lead">As ideas come to my mind I will post here.</p>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-sm" href="{%url 'index'%}" role="button">Home</a>
+</div>
+
+<h2 >{{ user.title }}</h2>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Complete</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in todos %}
+      <tr>
+        <td><h5 style="color:dodgerblue" >{{ user.title }}</h5></td>
+        <td>{{ user.description }}</td>
+        <td>{{ user.completed }}</td>
+        <td>{{ user.id }}</td>
+      </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+{%endblock%}

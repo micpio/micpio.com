@@ -1,0 +1,16 @@
+{% extends 'news/base.html' %}
+
+{% block pagecontent %}
+
+
+
+<a class="w3-bar-item w3-button " href={% url 'index'%}>back
+</a>
+
+<div class="post">
+
+    <a class="btn btn-default" href="{% url 'book_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    <h2>{{ post.journalist }}</h2>
+    <p>{{ post.story|linebreaksbr }}</p>
+</div>
+{% endblock %}

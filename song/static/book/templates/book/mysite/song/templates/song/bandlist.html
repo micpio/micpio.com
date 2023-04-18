@@ -1,0 +1,44 @@
+{% extends 'song/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<meta charset="UTF-8">
+<title>{%block title%} Bandsongs{%endblock%}</title>
+</head>
+<body>
+
+
+{%block pagecontent%}
+<div class="w3-panel w3-leftbar w3-text-blue  w3-xxlarge w3-serif">
+<p><i>Songs I have performed with several bands</p></div>
+     <h1><a href="">song list.</a></h1>
+<div class="substance w3-text-black">
+  <table class="table table-dark ">
+    <tr>
+      <th>titles</th>
+      <th>artists</th>
+      <th>group</th>
+    </tr>
+
+
+
+    {% for titles in users%}
+
+      <tr>
+        <td><a href=""> {{ titles.title }}</a></td>
+        <td> {{ titles.artist }}</td>
+        <td> {{ titles.group }}</td>
+
+      </tr>
+
+   {% endfor %}
+  </table>
+{% include 'partials/paginator.html' with page_obj=users %}
+{%endblock%}
+
+</body>
+</html>
+  

@@ -1,0 +1,72 @@
+{%extends 'book/base.html'%}
+
+ <!DOCTYPE html>
+
+ <html lang="en"> <head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+<meta charset="UTF-8">
+<title>{%block title%}Mt Books Read page{%endblock%}</title>
+</head>
+<body>
+
+{%block pagecontent%}
+
+  <div class="page-header">
+<a class="w3-bar-item w3-button w3-blue" href={% url 'book_new'%}>+ new book</a>
+
+ <h1><a href="">Some of the books I have read.</a></h1>
+
+        </div>
+
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      <tr>
+        <td>{{ user.book_title }}</td>
+        <td>{{ user.authors }}</td>
+        <td>{{ user.category }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<nav>
+{% if users.has_other_pages %}
+  <ul class="pagination pagination-lg">
+    {% if users.has_previous %}
+      <li><a href="?page={{ users.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in users.paginator.page_range %}
+      {% if users.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if users.has_next %}
+      <li><a href="?page={{ users.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+   
+
+</nav>
+{% endif %}
+{%endblock%}

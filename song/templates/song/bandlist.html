@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+<head>
+
+
+	<meta charset="UTF-8">
+	<title>{%block title%} Bandsongs{%endblock%}</title>
+</head>
+
+<html>
+<body>
+	{%block pagecontent%}
+
+	<div class="w3-grey w3-text-white">
+		<h1>Song List</h1>
+			<div class="w3-grey w3-text-white">
+
+	<table class="w3-grey-text w3-white w3-centered w3-table-all">
+		<p><i>{{count}} Songs I have performed with several bands</i></p>
+		<tr>
+			<th>titles</th>
+			<th>artists</th>
+			{% for titles in users%}
+
+		</tr>
+		<tr>
+			<td> {{ titles.title }}</td>
+			<td> {{ titles.artist }}</td>
+
+		</tr>
+	</div>
+		{% endfor %}
+	</div>
+		{% include "partials/paginate.html" %}
+
+
+		{%endblock%} </body>
+
+			</html>

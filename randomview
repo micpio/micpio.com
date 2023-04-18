@@ -1,0 +1,9 @@
+from django.utils import timezone
+from django.shortcuts import render, get_object_or_404
+import random
+
+def quotes(request):
+    phr=(random.randint(0, 8))
+    items =  open(/phrases/phr", "r")
+
+    return render(request,'todo/todo_list.html', {'items': items})

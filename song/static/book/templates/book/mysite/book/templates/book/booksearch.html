@@ -1,0 +1,29 @@
+{%extends 'book/base.html'%}
+
+
+{%block pagecontent%}
+<h1>Search Results</h1>
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">author</th>
+      <th scope="col">title</th>
+      <th scope="col">catagory</th>
+    </tr>
+  </thead>
+  {% for book in object_list %}
+
+     <tbody>
+    <tr>
+      <td>{{book.authors}}
+      <td>{{book.book_title}}</td>
+      <td>{{book.category}}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+
+</table>
+
+
+{%endblock%}

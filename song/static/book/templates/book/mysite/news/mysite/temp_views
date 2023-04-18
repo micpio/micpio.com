@@ -1,0 +1,132 @@
+from __future__ import unicode_literals
+from django.shortcuts import render
+from django.utils import timezone
+from blog.models import Post
+from book.models import Mybooksread
+from news.models import News
+from home.models import Home
+import math
+from django.views.generic import TemplateView
+
+class WwwwPageView(TemplateView):
+
+    template_name="w3template.html"
+
+
+class WallPageView(TemplateView):
+
+    template_name="wall.html"
+
+
+
+def home(request):
+    objs = Home.objects.all()
+    context={'obj': objs }
+    return render(request, 'index.html',context )
+
+
+def post_list(request):
+    post = Post.objects.all()
+    context={'post': post}
+    return render(request, 'post_list.html',context )
+
+def slice():
+    a = Mybooksread.objects.count()
+    return a
+def myread(request,):
+        b=slice()/4
+
+
+        objs = Mybooksread.objects.all()[ :b]
+
+        context ={'obj': objs}
+        return render(request,'booklist.html',context)
+
+def myreadone(request,):
+        a = Mybooksread.objects.count()
+        b=math.ceil(a/4)
+        c=b*2
+
+
+        objs = Mybooksread.objects.all()[b:c]
+
+        context ={'obj': objs}
+        return render(request,'booklist.html',context)
+
+def myreadtwo(request):
+        a = Mybooksread.objects.count()
+        b=int(a/4)
+        c=b*2
+        d=c+b
+        objs = Mybooksread.objects.all()[c:d]
+
+        context ={'obj': objs}
+        return render(request,'booklist.html',context)
+
+def myreadthree(request):
+        a = Mybooksread.objects.count()
+        b=int(a/4)
+        c=b*2
+        d=c+b
+        e=d+b
+        objs = Mybooksread.objects.all()[d:e]
+
+        context ={'obj': objs}
+        return render(request,'booklist.html',context)
+
+def myreadfour(request):                 #reserved fo expansion of book lisr add 5 to booklist.html nav bar
+        a = Mybooksread.objects.count()
+        b=int(a/4)
+        c=b*2
+        d=c+b
+        e=d+b
+        f=e+b
+        objs = Mybooksread.objects.all()[e:f]
+
+        context ={'obj': objs}
+        return render(request,'booklist.html',context)
+
+
+def news(request):                         #disabled  news page  deleted in navbar
+    news = News.objects.all()
+    context={'news': news}
+    return render(request,'news.html',context )
+
+def story(request):                      #review  page needs work or revision
+    story=News.objects.all()#need code to pick right story
+    context={'story':story}
+    return render(request,'story.html',context)
+
+
+#def exercise(request):    #may change to partial call instead of  database
+#    objs=Home.objects.all()#need code to pick right story
+ #   context={'obj':objs}
+  #  return render(request,'exercise.html',context)
+
+def exerciseone(request):    #may change to partial call instead of  database
+    objs=Home.objects.all()[0:1]
+
+    context={'obj':objs}
+    return render(request,'exercise.html',context)
+
+def exercisetwo(request):    #may change to partial call instead of  database
+    objs=Home.objects.all()[2:3]
+
+    context={'obj':objs}
+    return render(request,'exercise.html',context)
+def exercisethree(request):    #may change to partial call instead of  database
+    objs=Home.objects.all()[4:5]
+
+    context={'obj':objs}
+    return render(request,'exercise.html',context)
+def exercisefour(request):    #may change to partial call instead of  database
+    objs=Home.objects.all()[6:7]
+
+    context={'obj':objs}
+    return render(request,'exercise.html',context)
+def exercisefive(request):    #may change to partial call instead of  database
+    objs=Home.objects.all()[8:9]
+
+    context={'obj':objs}
+    return render(request,'exercise.html',context)
+    

@@ -1,0 +1,57 @@
+*{
+/*uncomment /* to change season */
+
+/*fall */
+
+background-color:#806600;
+color:white;
+padding-left:10px;,
+*/
+/*winter */
+/*
+
+background-color:#4db8ff;
+color:white;
+*/
+/*spring */
+
+/*
+
+background-color:pink;
+color:white;
+*/
+
+/*summer */
+
+/*
+background-color:green;
+color:white;
+*/
+
+}
+5p,h1,h2{
+letter-spacing:5px;
+}
+.customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+.story li{
+
+}
+s

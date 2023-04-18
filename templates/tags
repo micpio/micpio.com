@@ -1,0 +1,7 @@
+{%load static%}
+{% include "partials/homepagenavbar.html" %}
+{% block pagecontent %}
+
+{%endblock%}
+{%extends 'base.html'%}
+

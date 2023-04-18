@@ -1,0 +1,54 @@
+{%extends 'photos/photobase.html'%}
+
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Moer Photos</title>
+  </head>
+  <body>
+    {%block pagecontent%}
+<div class="page-header">
+
+   <h1><a href="">Photos taken in Green Bay Wisconsin area</a></h1>
+
+</div>
+{% for user in photos%}
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+	
+    </div>
+    <div class="col-3">
+	<div class="card" style="width: 35rem;">
+ 	 <img src=media/{{user.image}} class="card-img-top" alt="...">
+ 	 <div class="card-body">
+   	 <h5 class="card-title">{{user.description}}</h5>
+    </div>
+</div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endfor %}
+</div>
+
+    {%endblock%}
+
+  </body>
+</html>
