@@ -9,29 +9,29 @@
 <div class="w3-text-white" >{{ user.title }}</div>
 	{% endfor %}
 
-     <div class="w3-text-white">
+     <div class="w3-text-black w3-display-container w3-center">
         <h1> Cartoons (mostly political) </h1>
          <h1><i>Collection of {{count}} Cartoons</i></h1>
-
-     </div>
+      </div>     </div>
      {%for cartoons in cartoons %}
-     <div class="w3-container w3-gray w3-cell ">
-    <style>
-  box-sizing:border-box
-  .column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}</style>    <img src="{{cartoons.image.url}}" />
+     <div class="w3-container w3-gray w3-cell w3-center">
+     <img src="{{cartoons.image.url}}"style="width:75% />
         </div>
         {%endfor%}
          <br>
 {%for more in more %}
-     <div class="w3-container w3-gray w3-cell">
-        <img src="{{more.image.url}}" />
+
+<div class="w3-row-padding w3-margin-top">
+   <div class="w3-container w3-center">
+      <img src="{{more.image.url}}" style="width:75%"/>
+       </div>
+     </div>
+   
+      
+        
         </div>
         {%endfor%}
      {%endblock%}
-
+        </div>
 
 

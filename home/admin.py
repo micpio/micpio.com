@@ -1,11 +1,9 @@
 from django.contrib import admin
-
-
-# Register your models here.
 from django.contrib import admin
-from .models import Home
+from .models import Quotes
 
 
-admin.site.register(Home)
+admin.site.register(Quotes)
 
-# Register your models here.
+
+
