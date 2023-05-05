@@ -1,12 +1,17 @@
-{%load static%}
-<div class="w3-grey w3-center w3=panel">
-    {{items.name}}
 
-    <img  src="{% static  'images/mrbig.jpeg' %}"  alt="mrbig" style="width:80%;max-width:320px">
-    <img  src="{% static  'images/mrsbig.jpeg' %}"  alt="mrbig" style="width:80%;max-width:320px">
 
-<i>"If you don't come to my funeral I won't go to yours"......Yogi Berra"</i>
-<p>Thanks to a grant from the Big Fondation</p>
-<p>Henry and Lois Big.... <i>paintings by Modigliani</i></p>
+<body>
+<div class="w3-container w3-center w3=panel w3-text-brown"></div>
+
+<div class='w3-card w3-sand w3-text-brown'>
+Thanks to a grant from the Big Foundation<br>
+Henry and Lois Big.... <i>paintings by Modigliani</i><br>
+
+
+{%for image in disimage%}
+<img src="{{image.image}}">
+{%endfor%}
+
 </div><!--images-->
-
+</div><!-- card -->
+</body>

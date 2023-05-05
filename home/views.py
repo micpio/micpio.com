@@ -1,10 +1,12 @@
 from django.utils import timezone 
 from django.shortcuts import render,get_object_or_404 
+from home.models import Quotes
+from displays.models import Displays
 import random
 
 def home(request):
-     nums=[0,8]
-#     phr=random.randint(0,8)
- #    items = open("phrases"/phr, "r")
+    
+     items = random.choice(Quotes.objects.all())
 
-     return render(request,'home.html', )
+     disimage = Displays.objects.all()
+     return render(request,'base.html',{'items': items ,'disimage':disimage} )
