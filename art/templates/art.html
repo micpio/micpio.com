@@ -6,31 +6,22 @@
 
      {{ user.title }}</div>
 	{% endfor %}-->
- <div class="w3-panel w3-gray w3-cell w3-center">
-   <div class="w3-text-black">
+ <div class="w3-container w3-gray w3-center">
+   <div class="w3-text-white">
 
-        <h1> Colored pencil drawings </h1>
-         <h1><i>Collection of {{count}} Drawings</i></h1>
+
+        <h3> Colored pencil drawings </h3>
+         <h3><i>Collection of {{count}} Drawings</i></h3>
       </div>
      </div>
+
      {%for pieces in pieces %}
 
-
-        <img src="{{pieces.image.url}}" style="width:300px"hight="300px" />
-
-        </div>
-        {%endfor%}
-     </div>
-         <br>
-{%for more in more %}
-     <div class="w3-center w3-gray w3-text-white ">
-
-     <div class="w3-container w3-gray w3-cell">
-        <img src="{{more.image.url}}" />
-         <p>{{more.title}}</p>
-        </div>
-        {%endfor%}
-     </div>
+      <img src="{{pieces.image.url}}"/>
+     
+        
+    {%endfor%}
+    </div>
      {%endblock%}
 
 

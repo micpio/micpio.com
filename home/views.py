@@ -9,4 +9,4 @@ def home(request):
      items = random.choice(Quotes.objects.all())
 
      disimage = Displays.objects.all()
-     return render(request,'base.html',{'items': items ,'disimage':disimage} )
+     return render(request,'home.html',{'items': items ,'disimage':disimage, } )
