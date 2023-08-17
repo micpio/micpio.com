@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1','mickey3.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'project'
     'blog',
     'song',
     'book',

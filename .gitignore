@@ -5,11 +5,12 @@
 __pycache__
 db.sqlite3
 media
-
+git_token
+git token
 # Backup files # 
 *.bak 
 
-# If you are using PyCharm # 
+# If you are using PyCharm # w
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml

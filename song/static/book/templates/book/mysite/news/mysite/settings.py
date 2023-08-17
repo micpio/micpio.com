@@ -26,8 +26,7 @@ SECRET_KEY = '61mwu0e^4#zyu8g@cfuzp45g_1q4u9@=!yep*c33ayq5*kgej#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.micpio.com","micpio.pythonanywhere.com"]
-
+ALLOWED_HOSTS = ["www.micpio.com","micpio.pythonanywhere.com" "0.0.0.0"]
 # Application definition
 
 INSTALLED_APPS = [

@@ -27,4 +27,4 @@ def stories(request):
     except EmptyPage:
 
         users = paginator.page(paginator.num_pages)
-    return render(request, 'stories/storypage.html', { 'users': users ,'count':count , 'display' : display,})
+    return render(request, 'storypage.html', { 'users': users ,'count':count , 'display' : display,})

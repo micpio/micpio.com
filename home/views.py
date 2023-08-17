@@ -5,8 +5,10 @@ from displays.models import Displays
 import random
 
 def home(request):
+     displays = Displays.objects.all()
     
      items = random.choice(Quotes.objects.all())
+     return render(request,'home.html', {'items': items,'displays':displays })
 
-     disimage = Displays.objects.all()
-     return render(request,'home.html',{'items': items ,'disimage':disimage, } )
+
+     

@@ -14,7 +14,7 @@ SECRET_KEY = '^g-p83g^^3!^vd&lvxqe9qpx9&9bfqunka4=p-%l#y6qiktvhr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','www.micpio.com']
+ALLOWED_HOSTS = ['localhost','www.micpio.com''*']
 
 
 # Application definition
