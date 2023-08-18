@@ -22,18 +22,16 @@
 
 
 </div>
-  <table class=" w3-centered w3-text-black w3-table-all">
-    <tr>
+  <table class=" w3-table-all w3-large w3-margin-left  w3-text-black w3-card-4" > <tr>
       <th>Title</th>
       <th>Author</th>
       <th>Category</th>
     </tr>
     {% for user in users %}
     <tr>
-
-      <td><a href="/show/{{user.id}}">{{ user.book_title }}</a></td>
-      <td>{{ user.authors }}</td>
-      <td>{{ user.category }}</td>
+      <td class="w3-left"> {{ user.book_title }}</td>
+      <td> {{ user.authors }}</td>
+      <td> {{ user.category }}</td>
     </tr>
     {% endfor %}
   </table>
