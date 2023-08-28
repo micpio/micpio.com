@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+    
+{%block pagecontent%}
+
+        <div class="w3-container w3-center ">
+        
+        <h1>Photographs  </h1>
+        <h1><i>Collection of {{count}} Photographs</i></h1>
+        {%for photos in users%}
+       <div class=" w3-ul w3-center" style="width:100%">
+            <li><img src="{{photos.image.url}}"/><br>{{photos.description }}</li>
+        </div>
+       {% endfor %}
+       </div>
+        
+{%endblock%}

@@ -1,0 +1,27 @@
+ {%extends 'base.html'%}
+
+ {%block pagecontent%}
+
+ <div class="w3-center ">
+
+ <img class="w3-circle" src="media/media/witch.jpeg" style=width:200px height:400px>
+
+	{% for user in items %}
+<div >{{ user.title }}</div>
+	{% endfor %}
+
+
+    <div>
+        <h1>Stories Lyrics  </h1>
+         <h1><i>Collection of {{count}} Pieces</i></h1>
+ </div>
+
+
+{%for stories in users%}
+							<div class=" w3-ul w3-center" style="width:100%">
+									<li><a href="{{stories.image.url}}">{{stories.description }}</a></li>
+							</div>
+{% endfor %}
+</div>
+{%endblock%}
+
